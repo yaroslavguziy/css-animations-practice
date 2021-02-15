@@ -1,0 +1,263 @@
+.mavic {
+  width: 640px;
+  height: 400px;
+  background-color: #76aa31;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.mavic-off {
+  animation-name: mavic-off;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.mavic__title {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  font-size: 24px;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+.mavic-on {
+  animation-name: mavic-on;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.mavic::after,
+.mavic::before {
+  content: '';
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  animation-duration: 1s;
+}
+
+.mavic::after {
+  background-image: url(../img/iphone-front.png);
+  transform: translateY(200%) rotate(20deg);
+  right: 21%;
+}
+.mavic::before {
+  background-image: url(../img/iphone-back.png);
+  transform: translateY(200%) rotate(-20deg);
+  left: 21%;
+}
+
+.mavic:hover::after,
+.mavic:hover::before {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.animation-on::after {
+  animation-name: front-on;
+}
+
+.animation-off::after {
+  animation-name: front-off;
+}
+
+.animation-on::before {
+  animation-name: back-on;
+}
+
+.animation-off::before {
+  animation-name: back-off;
+}
+
+@keyframes mavic-on {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-200%);
+  }
+}
+
+@keyframes mavic-off {
+  0% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(30px);
+  }
+  70% {
+    transform: translateY(-20px);
+  }
+  80% {
+    transform: translateY(15px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes front-on {
+  0% {
+    transform: translateY(200%) rotate(20deg);
+  }
+  60% {
+    transform: translateY(0) rotate(0deg);
+    right: 21%;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    right: 33%;
+  }
+}
+
+@keyframes front-off {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(200%) rotate(20deg);
+  }
+}
+
+@keyframes back-on {
+  0% {
+    transform: translateY(200%) rotate(-20deg);
+  }
+  60% {
+    transform: translateY(0) rotate(0deg);
+    left: 21%;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    left: 33%;
+  }
+}
+
+@keyframes back-off {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(200%) rotate(-20deg);
+  }
+}
+/* .text {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 24;
+  font-family: sans-serif;
+}
+
+.text1 {
+  animation-name: bounceInDown;
+  animation-duration: 3s;
+} */
+/* .text2 {
+  /* animation-name: anim-2; */
+/* Час анімації */
+/* animation-duration: 2s; */
+/* Затримка */
+/* animation-delay: 3s; */
+/* Кількість повторень */
+/* animation-iteration-count: 2; */
+/* НАправлення, зміна анімації, вперед, назад, або вперед і назад */
+/* animation-direction: alternate; */
+/* определяет, как нужно применять стили к объекту анимации до и после ее выполнения. */
+/* animation-fill-mode: forwards; */
+/* } */
+
+/* .text3 {
+  margin-top: 100px;
+  animation-name: bounceInDown;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@keyframes anim-1 {
+  0% {
+    transform: translateX(-3000px);
+  }
+
+  50% {
+    transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim-2 {
+  0% {
+   
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(3);
+  }
+}
+
+/* @keyframes anim-3 {
+  0% {
+    transform: translateY(-3000px);
+  }
+
+  70% {
+    transform: translateY(50px);
+  }
+
+  80% {
+    transform: translateY(-20px);
+  }
+
+  90% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+} */
+
+/* @keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0) scaleY(3);
+  }
+
+  60% {
+    opacity: 1;
+
+    transform: translate3d(0, 25px, 0) scaleY(0.9);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0) scaleY(0.95);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0) scaleY(0.985);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}  */

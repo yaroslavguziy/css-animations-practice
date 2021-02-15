@@ -167,11 +167,9 @@
 /* animation-duration: 2s; */
 /* Затримка */
 /* animation-delay: 3s; */
-/* Кількість повторень */
+
 /* animation-iteration-count: 2; */
-/* НАправлення, зміна анімації, вперед, назад, або вперед і назад */
 /* animation-direction: alternate; */
-/* определяет, как нужно применять стили к объекту анимации до и после ее выполнения. */
 /* animation-fill-mode: forwards; */
 /* } */
 

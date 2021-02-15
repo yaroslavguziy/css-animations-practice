@@ -1,7 +1,7 @@
 const mavic = document.querySelector('.mavic');
 const mavicImg = document.querySelector('.mavic-img');
 
-// Ховер Java script
+// like css hover in JS
 mavic.addEventListener('mouseover', () => {
   mavicImg.classList.add('mavic-on');
   mavicImg.classList.remove('mavic-off');
@@ -9,7 +9,7 @@ mavic.addEventListener('mouseover', () => {
   mavic.classList.remove('animation-off');
 });
 
-// при знятті ховера клас знімається
+// remove hover in JS
 mavic.addEventListener('mouseout', () => {
   mavicImg.classList.remove('mavic-on');
   mavicImg.classList.add('mavic-off');
